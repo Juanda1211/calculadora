@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Calculadora</title>
+  <link rel="stylesheet" href="estilos.css">
+  <script defer src="script.js"></script>
+</head>
+<body>
+
+  <button id="modo-btn" onclick="cambiarModo()">
+    <span id="modo-icono">🌙</span>
+    <span id="modo-texto">Modo Oscuro</span>
+  </button>
+
+  <div class="calculadora">
+    <div class="pantalla" id="pantalla">0</div>
+    <div class="botones">
+      <button class="btn" onclick="borrar()">AC</button>
+      <button class="btn" onclick="agregar('/')">/</button>
+      <button class="btn" onclick="agregar('*')">*</button>
+      <button class="btn" onclick="borrarUno()">⌫</button>
+
+      <button class="btn" onclick="agregar('7')">7</button>
+      <button class="btn" onclick="agregar('8')">8</button>
+      <button class="btn" onclick="agregar('9')">9</button>
+      <button class="btn" onclick="agregar('-')">-</button>
+
+      <button class="btn" onclick="agregar('4')">4</button>
+      <button class="btn" onclick="agregar('5')">5</button>
+      <button class="btn" onclick="agregar('6')">6</button>
+      <button class="btn" onclick="agregar('+')">+</button>
+
+      <button class="btn" onclick="agregar('1')">1</button>
+      <button class="btn" onclick="agregar('2')">2</button>
+      <button class="btn" onclick="agregar('3')">3</button>
+      <button class="btn" onclick="calcular()">=</button>
+
+      <button class="btn" onclick="agregar('0')">0</button>
+      <button class="btn" onclick="agregar('.')">.</button>
+    </div>
+  </div>
+
+
+</body>
+</html>
