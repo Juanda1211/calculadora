@@ -170,7 +170,7 @@ body.oscuro .calculadora {
 }
 
 body.oscuro .pantalla {
-  background-color: #333;
+  background-color: #725a5a;
   color: #00ff99;
 }
 
@@ -180,7 +180,7 @@ body.oscuro .btn {
 }
 
 body.oscuro .btn:hover {
-  background-color: #666;
+  background-color: #3a3939;
   box-shadow: 0 0 10px rgba(0, 255, 150, 0.3);
 }
 

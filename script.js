@@ -39,8 +39,8 @@ function cambiarModo() {
   icono.classList.add("girar");
   setTimeout(() => icono.classList.remove("girar"), 500);
 
-  icono.innerText = enModoOscuro ? "☀️" : "🌙";
-  texto.innerText = enModoOscuro ? "Sunny mode" : "Moony mode";
+  icono.innerText = enModoOscuro ? "🌙" : "☀️";
+  texto.innerText = enModoOscuro ? "Moony mode" : "Sunny mode";
 }
 
 function aplicarModoGuardado() {
@@ -52,10 +52,10 @@ function aplicarModoGuardado() {
   if (modoGuardado === "true") {
     cuerpo.classList.add("oscuro");
     icono.innerText = "☀️";
-    texto.innerText = "Modo Claro";
+    texto.innerText = "Sunny mode";
   } else {
     icono.innerText = "🌙";
-    texto.innerText = "Modo Oscuro";
+    texto.innerText = "Moony mode";
   }
 }
 
