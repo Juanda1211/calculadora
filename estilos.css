@@ -9,6 +9,32 @@ body {
   transition: background 0.3s ease;
 }
 
+body.claro {
+  background-color: #fff;
+  color: #222;
+}
+
+body.claro .calculadora {
+  background-color: #fff;
+  color: #222;
+  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+body.claro .pantalla {
+  background-color: #f0f0f0;
+  color: #222;
+}
+
+body.claro .btn {
+  background-color: #e0e0e0;
+  color: #222;
+}
+
+body.claro .btn:hover {
+  background-color: #d4d4d4;
+  color: #222;
+}
+
 .calculadora {
   background: white;
   padding: 20px;

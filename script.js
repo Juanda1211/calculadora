@@ -33,7 +33,16 @@ function cambiarModo() {
   const icono = document.getElementById("modo-icono");
   const texto = document.getElementById("modo-texto");
 
-  const enModoOscuro = cuerpo.classList.toggle("oscuro");
+  let enModoOscuro;
+  if (cuerpo.classList.contains("oscuro")) {
+    cuerpo.classList.remove("oscuro");
+    cuerpo.classList.add("claro");
+    enModoOscuro = false;
+  } else {
+    cuerpo.classList.remove("claro");
+    cuerpo.classList.add("oscuro");
+    enModoOscuro = true;
+  }
   localStorage.setItem("modoOscuro", enModoOscuro ? "true" : "false");
 
   icono.classList.add("girar");
@@ -51,11 +60,14 @@ function aplicarModoGuardado() {
 
   if (modoGuardado === "true") {
     cuerpo.classList.add("oscuro");
-    icono.innerText = "☀️";
-    texto.innerText = "Sunny mode";
-  } else {
+    cuerpo.classList.remove("claro");
     icono.innerText = "🌙";
     texto.innerText = "Moony mode";
+  } else {
+    cuerpo.classList.add("claro");
+    cuerpo.classList.remove("oscuro");
+    icono.innerText = "☀️";
+    texto.innerText = "Sunny mode";
   }
 }
 
