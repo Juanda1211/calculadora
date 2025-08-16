@@ -18,7 +18,15 @@ function borrarUno() {
 
 function calcular() {
   try {
-    const resultado = eval(operacion);
+    // Cerrar paréntesis abiertos automáticamente
+    let expr = operacion;
+    const openParens = (expr.match(/\(/g) || []).length;
+    const closeParens = (expr.match(/\)/g) || []).length;
+    if (openParens > closeParens) {
+      expr += ')'.repeat(openParens - closeParens);
+    }
+    // Evaluar la expresión
+    const resultado = eval(expr);
     pantalla.innerText = resultado;
     operacion = resultado.toString();
   } catch {

@@ -37,10 +37,10 @@ body.claro .btn:hover {
 
 .calculadora {
   background: white;
-  padding: 20px;
+  padding: 40px;
   border-radius: 10px;
   box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.2);
-  width: 300px;
+  display: inline-block;
   transition: box-shadow 0.3s ease, background 0.3s ease;
 }
 
@@ -58,13 +58,14 @@ body.claro .btn:hover {
 
 .botones {
   display: grid;
-  grid-template-columns: repeat(4 , 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 15px;
+  width: 100%;
 }
 
 .btn {
   padding: 20px;
-  font-size: 1.2em;
+  font-size: 1.5em;
   border: none;
   border-radius: 5px;
   background: #e0e0e0;
@@ -132,82 +133,27 @@ body.oscuro .btn:hover {
 
 
 
-@media (prefers-color-scheme: dark) {
-  body {
-    background-color: #121212;
-  }
-  
+@media (max-width: 600px) {
   .calculadora {
-    background-color: #1e1e1e;
-    color: white;
-    box-shadow: 0px 10px 30px rgba(0, 255, 150, 0.1);
+    width: 95vw !important;
+    height: auto !important;
+    padding: 10px !important;
+    min-width: 0;
+    margin: 0 auto;
+    box-sizing: border-box;
   }
-  
   .pantalla {
-    background-color: #333;
-    color: #00ff99;
+    font-size: 1.2em !important;
+    padding: 10px !important;
   }
-  
+  .botones {
+    gap: 8px !important;
+  }
   .btn {
-    background-color: #444;
-    color: white;
+    padding: 10px !important;
+    font-size: 1em !important;
+    min-width: 0;
+    width: 100%;
+    box-sizing: border-box;
   }
-  
-  .btn:hover {
-    background-color: #000000;
-    box-shadow: 0 0 10px rgba(0, 255, 150, 0.5);
-    color: white;
-  }
-  
-#modo-btn {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  padding: 10px 15px;
-  font-size: 1em;
-  background-color: #222;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  transition: background-color 0.3s;
-}
-
-#modo-icono {
-  display: inline-block;
-  transition: transform 0.5s ease;
-}
-
-.girar {
-  transform: rotate(360deg);
-}
-
-body.oscuro {
-  background-color: #121212;
-}
-
-body.oscuro .calculadora {
-  background-color: #1e1e1e;
-  color: white;
-  box-shadow: 0px 10px 30px rgba(0, 255, 150, 0.1);
-}
-
-body.oscuro .pantalla {
-  background-color: #725a5a;
-  color: #00ff99;
-}
-
-body.oscuro .btn {
-  background-color: #444;
-  color: white;
-}
-
-body.oscuro .btn:hover {
-  background-color: #3a3939;
-  box-shadow: 0 0 10px rgba(0, 255, 150, 0.3);
-}
-
 }
